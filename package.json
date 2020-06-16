@@ -1,0 +1,48 @@
+{
+  "name": "tswj",
+  "version": "1.0.0",
+  "description": "TypeScript SASS with Webpack and bubble optimization and Jest testing",
+  "main": "public/index.html",
+  "scripts": {
+    "css": "sass --watch public/assets/sass:public/assets/css",
+    "js": "tsc -w",
+    "start": "concurrently \"npm:css\" \"npm:js\" \"webpack\" \"serve public\"",
+    "build": "webpack --config webpack.config.prod.js",
+    "test": "jest --watchAll"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GokulnathP/TS-SASS-Webpack-Jest-Template.git"
+  },
+  "keywords": [
+    "TypeScript",
+    "SASS",
+    "WebPack",
+    "PWA",
+    "Jest"
+  ],
+  "author": "Gokulnath P",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GokulnathP/TS-SASS-Webpack-Jest-Template/issues"
+  },
+  "homepage": "https://github.com/GokulnathP/TS-SASS-Webpack-Jest-Template#readme",
+  "dependencies": {
+    "bootstrap-social": "^5.1.1",
+    "core-js": "^3.6.5",
+    "font-awesome": "^4.7.0",
+    "regenerator-runtime": "^0.13.5"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.10.2",
+    "@babel/preset-env": "^7.10.2",
+    "babel-loader": "^8.1.0",
+    "clean-webpack-plugin": "^3.0.0",
+    "concurrently": "^5.2.0",
+    "jest": "^26.0.1",
+    "puppeteer": "^4.0.0",
+    "serve": "^11.3.2",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.11"
+  }
+}
